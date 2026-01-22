@@ -6,10 +6,10 @@ const PORT = 3231;
 
 // ================== KONFIG POSTGRES ==================
 const pool = new Pool({
-  user: "user_hydroponic",        // ganti sesuai user Anda
+  user: "postgres",        // ganti sesuai user Anda
   host: "localhost",
-  database: "hydroponic",
-  password: "q1w2e3r4t5", // ganti
+  database: "postgres",
+  password: "", // ganti
   port: 5432,
 });
 
