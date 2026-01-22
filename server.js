@@ -9,7 +9,7 @@ const pool = new Pool({
   user: "postgres",        // ganti sesuai user Anda
   host: "localhost",
   database: "postgres",
-  password: "12345", // ganti
+  password: "q1w2e3r4t5", // ganti
   port: 5432,
 });
 
