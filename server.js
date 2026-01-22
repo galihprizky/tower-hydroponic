@@ -58,7 +58,7 @@ app.post("/api/data", async (req, res) => {
 
   } catch (err) {
     console.error("DB Error:", err);
-    res.status(500).json({ status: "error", message: "database error" });
+    res.status(500).json({ status: "error", message: "database error", pesan: err.message });
   }
 });
 
