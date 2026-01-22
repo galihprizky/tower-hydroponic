@@ -66,7 +66,7 @@ app.post("/api/data", async (req, res) => {
 app.get("/api/data", async (req, res) => {
   try {
     const result = await pool.query(
-      "SELECT * FROM sensor_data ORDER BY id DESC LIMIT 20"
+      "SELECT * FROM sensor_data ORDER BY id DESC LIMIT 100"
     );
     res.status(200).json(result.rows);
   } catch (err) {
