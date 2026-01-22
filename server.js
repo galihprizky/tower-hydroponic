@@ -75,6 +75,17 @@ app.get("/api/data", async (req, res) => {
   }
 });
 
+// ================== ENDPOINT HAPUS SEMUA DATA ==================
+app.delete("/api/data", async (req, res) => {
+  try {
+    await pool.query("DELETE FROM sensor_data");
+    res.status(200).json({ status: "ok", message: "Semua data berhasil dihapus" });
+  } catch (err) {
+    console.error("DB Error:", err);
+    res.status(500).json({ status: "error", message: "database error", pesan: err.message });
+  }
+});
+
 // ================== CEK SERVER ==================
 app.get("/", (req, res) => {
   res.send("Hydroponic Data Server Running");
