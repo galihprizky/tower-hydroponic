@@ -71,7 +71,7 @@ app.get("/api/data", async (req, res) => {
     res.status(200).json(result.rows);
   } catch (err) {
     console.error("DB Error:", err);
-    res.status(500).json({ status: "error", message: "database error" });
+    res.status(500).json({ status: "error", message: "database error", pesan: err.message });
   }
 });
 
